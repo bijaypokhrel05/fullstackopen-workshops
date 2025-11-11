@@ -1,0 +1,42 @@
+POST http://localhost:3001/api/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJrYXR3YWwiLCJpYXQiOjE3NjI4MzY5NDh9.mRIvI0CdWp_reClaw3iJnUdLjNMUVIDnIY8ZZNag4-g
+Content-Type: application/json
+
+{
+    "content": "Man Bina ko Dhan Thulo ki Dhan Bina ko Man...",
+    "important": false
+}
+
+###
+
+# create new users
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "name": "Bijay Pokhrel",
+    "username": "bijay",
+    "admin": true
+}
+
+###
+
+# login with existing user 
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "katwal",
+    "password": "secretWord"
+}
+###
+
+PUT http://localhost:3001/api/users/katwal
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywidXNlcm5hbWUiOiJiaWpheSIsImlhdCI6MTc2MjgzNjgwOH0.kJIcbmMROteLc7jRTmbXM68O1JARExBB6W3beEJiawU
+Content-Type: application/json
+
+{
+    "disabled": false
+}
+
+
